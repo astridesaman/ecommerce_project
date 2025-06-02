@@ -1,0 +1,182 @@
+:root {
+  --color-sable: #fef6e4;
+  --color-océan: #006d77;
+  --color-coco: #e29578;
+  --color-hibiscus: #ff5e5b;
+  --text-dark: #2d2d2d;
+
+  --radius: 10px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  --font-main: 'Urbanist', sans-serif;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-sable);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Dark mode */
+body.dark {
+  --color-sable: #2e2e2e;
+  --text-dark: #f1f1f1;
+  --color-océan: #48cae4;
+  --color-coco: #ffafcc;
+  --color-hibiscus: #fb7185;
+
+  background-color: var(--color-sable);
+  color: var(--text-dark);
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--color-océan), var(--color-coco));
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, #83c5be 0%, #edf6f9 100%);
+  padding: 4rem 2rem 6rem;
+  text-align: center;
+  color: #034748;
+  overflow: hidden;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background-color: var(--color-coco);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #cf8366;
+}
+
+.wave {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Product List */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Shopping Cart */
+shopping-cart {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 280px;
+  max-height: 80vh;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  overflow-y: auto;
+  border: 2px solid var(--color-océan);
+  z-index: 999;
+}
+
+body.dark shopping-cart {
+  background: #3b3b3b;
+  color: white;
+  border-color: var(--color-coco);
+}
+
+/* Filter Bar */
+filter-bar {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: var(--color-coco);
+  color: white;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+}
+
+/* Product Card */
+.card {
+  position: relative;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+}
+
+.card::before {
+  content: 'Éco 🌿';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--color-océan);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  shopping-cart {
+    position: static;
+    width: 100%;
+    margin: 1rem auto;
+  }
+}

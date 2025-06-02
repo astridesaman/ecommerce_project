@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <h1></h1>
+  <theme-toggle></theme-toggle>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2></h2>
+    <p></p>
+    <a href="#produits" class="cta">Découvrir</a>
+  </div>
+  <!-- <img src="/img/wave.svg" alt="vague décorative" class="wave" /> -->
+</section>
+
+
+  <filter-bar></filter-bar>
+  <theme-toggle></theme-toggle>
+
+  <product-list></product-list>
+
+  <shopping-cart></shopping-cart>
+
+  <!-- Import des composants Web -->
+  <script type="module" src="./components/product-card.js"></script>
+  <script type="module" src="./components/product-list.js"></script>
+  <script type="module" src="./components/shopping-cart.js"></script>
+  <script type="module" src="./components/cart-item.js"></script>
+  <script type="module" src="./components/filter-bar.js"></script>
+  <script type="module" src="./components/theme-toggle.js"></script>
+</body>
+</html>

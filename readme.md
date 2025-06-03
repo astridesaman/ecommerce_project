@@ -1,70 +1,38 @@
-# 🛍️ Boutique E-commerce Modulaire - Web Components
+# E-Commerce – Projet Web Components
 
-Ce projet est une application e-commerce moderne, minimaliste et modulaire utilisant des **Web Components** personnalisés. Il met l'accent sur l'écoconception, la performance et l'expérience utilisateur.
-
----
-
-## 🚀 Fonctionnalités
-
-- 🛒 **Panier interactif** avec gestion des articles et du total
-- 📦 **Cartes produits dynamiques** (image, nom, prix, bouton)
-- 🎛️ **Filtres par catégorie/prix** avec composants réutilisables
-- 🌗 **Mode clair/sombre** avec commutateur `<theme-toggle>`
-- ⚡ Architecture modulaire : chaque partie est un Web Component indépendant
+Un site e-commerce moderne et éco-responsable, conçu avec des **Web Components** (utilisant `Lit`, `Shadow DOM`, `slots`, `events`, et `localStorage`). Il permet de filtrer des produits, de les ajouter dynamiquement au panier, tout en assurant une expérience utilisateur fluide.
 
 ---
 
-## 🧱 Composants Web utilisés
+## 🧩 Fonctionnalités
 
-| Composant         | Description                                 |
-|------------------|---------------------------------------------|
-| `<product-card>`  | Affiche un produit (image, nom, prix, bouton) |
-| `<product-list>`  | Gère la liste de produits                  |
-| `<filter-bar>`    | Barre de filtres (prix, catégorie, etc.)    |
-| `<shopping-cart>` | Panier interactif                          |
-| `<cart-item>`     | Affiche un article dans le panier           |
-| `<theme-toggle>`  | Bascule entre thème clair et sombre         |
+- 🔸 **Affichage dynamique des produits** avec `product-list` et `product-card-lit`
+- 🔸 **Ajout au panier** via des événements personnalisés
+- 🔸 **Panier interactif** (`shopping-cart`) avec sauvegarde `localStorage`
+- 🔸 **Filtres dynamiques** (`filter-bar`) sur la catégorie et le prix
+- 🔸 **Thème clair / sombre** via `theme-toggle`
+- 🔸 **Encapsulation complète** via `Shadow DOM` et `slots`
 
 ---
 
-## 📂 Structure du projet
+## 📁 Structure des fichiers
 
-ecommerce-app/
-├── index.html                # Maquette HTML principale
-├── style.css                 # Styles globaux
+/
+├── index.html # Fichier principal HTML
+├── styles.css # Style global
 ├── components/
-│   ├── product-card.js       # Web Component: Carte produit
-│   ├── shopping-cart.js      # Web Component: Panier
-│   ├── filter-bar.js         # Web Component: Barre de filtres
-│   ├── theme-toggle.js       # Web Component: Changement de thème
-├── assets/
-│   ├── tshirt.jpg            # Images produits
-│   └── ...                   # Autres fichiers d'images
+│ ├── product-list.js # Génère la grille de produits
+│ ├── product-card-lit.js # Carte individuelle de produit (avec <slot>)
+│ ├── shopping-cart.js # Panier avec événements "add", "increment", "decrement"
+│ ├── cart-item.js # Item affiché dans le panier
+│ ├── filter-bar.js # Barre de filtrage (catégorie + prix max)
+│ └── theme-toggle.js # Switch Dark/Light mode
+├── img/
+│ ├── iphone16.jpg # Exemple de produit
+│ ├── tshirt.jpg
+│ ├── sweat eco.jpg
+│ └── casquette.jpg
 
 
----
-
-## 🛠️ Technologies utilisées
-
-- ✅ HTML5 / CSS3
-- ✅ Web Components natifs (ou [Lit](https://lit.dev/) en option)
-- ✅ JavaScript ES6+
-- ✅ localStorage (pour persistance panier)
-
----
-
-## 🧪 À venir
-
-- [ ] Intégration API pour catalogue dynamique
-- [ ] Système de promotions automatiques
-- [ ] Authentification et historique de commandes
-- [ ] Paiement (simulation)
-
----
-
-## 💡 Installation rapide
-
-```bash
-git clone https://github.com/votre-utilisateur/ecommerce-web-components.git
-cd ecommerce-web-components
-# Ouvrir index.html dans le navigateur
+# 👨‍💻 Auteurs
+- Réalisé par Astride Saman dans le cadre d'un projet universitaire / personnel en 2025.

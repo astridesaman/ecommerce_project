@@ -3,39 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title></title>
+  <title>E-commerce</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-<header>
-  <h1></h1>
-  <theme-toggle></theme-toggle>
-</header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2></h2>
-    <p></p>
-    <a href="#produits" class="cta">Découvrir</a>
-  </div>
-  <!-- <img src="/img/wave.svg" alt="vague décorative" class="wave" /> -->
-</section>
+  <!-- En-tête -->
+  <header>
+    <h1>E-Commerce</h1>
+    <nav>
+      <a href="#produits">Tous</a>
+      <a href="#smartphones">Produits Electroniques</a>
+      <a href="#ordinateurs">Produits Textiles Eco</a>
+      <a href="#accessoires">Accessoires</a>
+    </nav>
+    <button id="toggle-cart" class="cta">🛒 Voir / Fermer le panier</button>
+    <theme-toggle></theme-toggle>
+  </header>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Bienvenue dans notre ecommerce</h2>
+      <p>Des produits électroniques modernes, aux produits responsables</p>
+      <a href="#produits" class="cta">Découvrir</a>
+    </div>
+  </section>
 
+  <!-- Barre de filtres -->
   <filter-bar></filter-bar>
-  <theme-toggle></theme-toggle>
 
+  <!-- Liste des produits -->
+  <section id="produits">
+  <!-- Liste dynamique des produits -->
   <product-list></product-list>
+  
 
+  </section>
+
+  <!-- Panier flottant -->
   <shopping-cart></shopping-cart>
 
-  <!-- Import des composants Web -->
-  <script type="module" src="./components/product-card.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 e-commerce • Tous droits réservés</p>
+      <p>Crée par Astride SAMAN et Holisoa RASAMOELSON</p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts des Web Components -->
+  <script type="module" src="./components/product-card-lit.js"></script>
   <script type="module" src="./components/product-list.js"></script>
   <script type="module" src="./components/shopping-cart.js"></script>
   <script type="module" src="./components/cart-item.js"></script>
   <script type="module" src="./components/filter-bar.js"></script>
   <script type="module" src="./components/theme-toggle.js"></script>
+
 </body>
 </html>

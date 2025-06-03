@@ -1,5 +1,3 @@
-// components/filter-bar.js
-
 class FilterBar extends HTMLElement {
   constructor() {
     super();
@@ -8,43 +6,60 @@ class FilterBar extends HTMLElement {
       <style>
         .filters {
           display: flex;
-          gap: 1rem;
+          flex-wrap: wrap;
           justify-content: center;
-          align-items: center;
-          padding: 1rem;
-          background: var(--color-océan, #006d77);
-          color: white;
-          border-radius: 8px;
-          font-weight: 500;
+          gap: 1rem;
+          padding: 1rem 2rem;
+          background-color: var(--bg-muted, #f5f5f5);
+          color: var(--text-main, #1a1a1a);
+          border-radius: var(--radius, 8px);
+          box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.05));
         }
+
         label {
           display: flex;
           flex-direction: column;
-          font-size: 0.9rem;
-        }
-        select {
-          background: white;
-          color: var(--color-océan, #006d77);
-          padding: 0.5rem;
-          border: none;
-          border-radius: 6px;
+          font-size: 0.95rem;
           font-weight: 500;
+          color: var(--text-main);
+        }
+
+        select {
+          margin-top: 0.3rem;
+          background-color: var(--bg-main, #ffffff);
+          color: var(--text-main);
+          border: 1px solid #ccc;
+          padding: 0.5rem 0.75rem;
+          border-radius: var(--radius);
+          font-size: 1rem;
+          font-family: inherit;
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        select:focus {
+          outline: none;
+          border-color: var(--accent);
+          box-shadow: 0 0 0 2px rgba(0, 109, 119, 0.2);
         }
       </style>
+
       <div class="filters">
         <label>Catégorie
           <select id="category">
             <option value="all">Tout</option>
-            <option value="T-shirt DJ">T-shirt DJ</option>
+            <option value="T-shirt">T-shirt</option>
             <option value="Casquette Mix">Casquette Mix</option>
             <option value="Sweat Éco">Sweat Éco</option>
+            <option value="iPhone 16">iPhone 16</option>
           </select>
         </label>
         <label>Prix max
           <select id="price">
+            <option value="100000">100 000</option>
+            <option value="50000">50 000</option>
+            <option value="20000">20 000</option>
             <option value="10000">10 000</option>
             <option value="5000">5 000</option>
-            <option value="3000">3 000</option>
           </select>
         </label>
       </div>
